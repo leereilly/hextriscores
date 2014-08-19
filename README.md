@@ -1,0 +1,23 @@
+# Hextriscores
+
+A little script to dynamically generate Hextris score tiles for sharing via Twitter Summary Cards.
+
+```
+$ git clone https://github.com/leereilly/hextriscores.git
+$ bundle install
+$ ruby script.rb
+Processing image 1 ...
+Processing image 2 ...
+...
+...
+...
+Processing image 9998 ...
+Processing image 9999 ...
+```
+
+:boom:
+
+![](scores/1.png)
+![](scores/10.png)
+![](scores/100.png)
+![](scores/1337.png)
