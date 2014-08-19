@@ -3,10 +3,10 @@ require 'oily_png'
 require 'RMagick'
 include Magick
 
-1..10.times do |score|
+1..9999.times do |score|
   puts "Processing image #{score} ..."
 
-  canvas = Image.new(512, 512) do |c|
+  canvas = Image.new(120, 104) do |c|
     c.background_color= "Transparent"
   end
 
@@ -14,9 +14,9 @@ include Magick
   gc.stroke('transparent')
   gc.fill('white')
   gc.text_align(Magick::CenterAlign)
-  gc.text(256, 270, "#{score}")
+  gc.text(60, 59, "#{score}")
   gc.font_family = 'Helvetica'
-  gc.pointsize = 64
+  gc.pointsize = 20
 
   gc.draw(canvas)
   canvas.write("scores/#{score}.png")
