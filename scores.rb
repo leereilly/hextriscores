@@ -24,5 +24,5 @@ include Magick
   background = ChunkyPNG::Image.from_file("_hextris_core.png")
   foreground = ChunkyPNG::Image.from_file("scores/#{score}.png")
   background.compose!(foreground, 0, 0)
-  background.save("scores/#{score}.png", :fast_rgba)
+  background.save("images/#{score}.png", :fast_rgba)
 end
