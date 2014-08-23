@@ -35,25 +35,25 @@ end
 1..9999.times do |score|
   puts "Processing image #{score} ..."
 
-  # canvas = Image.new(120, 120) do |c|
-  #   c.background_color= "Transparent"
-  # end
-  #
-  # gc = Magick::Draw.new
-  # gc.stroke('transparent')
-  # gc.fill('white')
-  # gc.text_align(Magick::CenterAlign)
-  # gc.text(60, 71, "#{score}")
-  # gc.font_family = 'Helvetica'
-  # gc.pointsize = 20
-  #
-  # gc.draw(canvas)
-  # canvas.write("images/#{score}.png")
-  #
-  # background = ChunkyPNG::Image.from_file("_hextris_core.png")
-  # foreground = ChunkyPNG::Image.from_file("images/#{score}.png")
-  # background.compose!(foreground, 0, 0)
-  # background.save("images/#{score}.png", :fast_rgba)
+  canvas = Image.new(120, 120) do |c|
+    c.background_color= "Transparent"
+  end
+
+  gc = Magick::Draw.new
+  gc.stroke('transparent')
+  gc.fill('white')
+  gc.text_align(Magick::CenterAlign)
+  gc.text(60, 71, "#{score}")
+  gc.font_family = 'Helvetica'
+  gc.pointsize = 20
+
+  gc.draw(canvas)
+  canvas.write("images/#{score}.png")
+
+  background = ChunkyPNG::Image.from_file("_hextris_core.png")
+  foreground = ChunkyPNG::Image.from_file("images/#{score}.png")
+  background.compose!(foreground, 0, 0)
+  background.save("images/#{score}.png", :fast_rgba)
 
   # generate redirect file
   html =  "<!DOCTYPE html>\n"
