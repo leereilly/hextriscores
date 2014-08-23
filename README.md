@@ -1,6 +1,6 @@
 # Hextriscores
 
-This little script to generate a website for supporting dynamic Hextris score tiles in Tweets e.g.
+A little script to generate a website for supporting dynamic Hextris score tiles in Tweets e.g.
 
 ![](images/readme.png)
 
