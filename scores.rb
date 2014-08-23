@@ -2,28 +2,10 @@ require 'rubygems'
 require 'oily_png'
 require 'RMagick'
 
+include Magick
+
 # Create HTML and PNG files representing Hextris High Scores for sharing
 # on the Twitters. Results in a directory structure like this:
-#
-# [-] hextriscores
-#     [-] images
-#         [+] 0.png
-#         [+] 1.png
-#          .
-#          .
-#          .
-#         [+] 9999.png
-#     [-] score
-#         [+] 1
-#             [-] index.html
-#         [+] 2
-#             [-] index.html
-#          .
-#          .
-#          .
-#         [+] 9999
-
-include Magick
 
 begin
   Dir.mkdir "images"
